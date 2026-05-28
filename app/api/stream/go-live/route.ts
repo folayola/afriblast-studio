@@ -4,7 +4,8 @@ import { createClient } from '@/utils/supabase/server';
 import { Resend } from 'resend';
 
 // Initialize the Resend mail transmission subsystem
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendKey = process.env.RESEND_API_KEY || 're_mock_key_for_build_purposes';
+export const resend = new Resend(resendKey);
 
 export async function POST(request: Request) {
   try {
