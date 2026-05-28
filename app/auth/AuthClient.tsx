@@ -1,6 +1,9 @@
 // src/app/auth/AuthClient.tsx
 'use client';
 
+// Force Next.js compilation workers to skip tracking this client module tree at build time
+export const dynamic = 'force-dynamic'; 
+
 import React, { useState, useEffect, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '../../utils/supabase/client';
