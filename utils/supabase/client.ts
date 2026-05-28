@@ -8,4 +8,3 @@ export const createClient = () => {
 
   return createBrowserClient(supabaseUrl, supabaseAnonKey);
 };
-
